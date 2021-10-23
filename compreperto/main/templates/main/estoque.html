@@ -1,0 +1,82 @@
+{% extends 'main/base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/carrinho.css' %}" />
+<link rel="stylesheet" href="{% static 'css/pedido.css' %}" />
+<style>
+  input[type="number"]{
+    -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+          width: 40px;
+          text-align: center;
+          font-size: 1.2em;
+          border-style: none;
+          background-color: #EFEFEF;
+  }
+</style>
+{% endblock css %}
+
+{% block title %}Estoque{% endblock title %}
+{% block body %}
+
+
+{% comment %} Conteúdo do corpo {% endcomment %}
+<div class="body-container" style="width: 100%;">
+  <div class="endereco-container" style="width: 80%;"><br>
+    <h1 style="margin-left: 30%;">Estoque da Loja {{loja.nome}} </h1><br>
+    <section class="produtos" style="margin-left: 30%;">
+      <form method="post">
+      <table id = "carrinho">
+  {% comment %} Titulos da tabela {% endcomment %}
+          <tr class = "titulos">
+            <th class = "principal" align = "left">PRODUTO</th>
+            <th>PREÇO</th>
+            <th>QUANTIDADE</th>
+            <th>INDISPONIBILIZAR</th>
+          </tr>
+          {% comment %} Produtos {% endcomment %}
+      {% csrf_token %}
+      {% for prod in produtos %}
+          <tr class = "produto">
+              <td class = "imagem-produto" align = "left">
+              <img src="{% static 'pictures/image-svgrepo-com.svg' %}" alt="">
+              <h4>{{ prod.nome }} {{ prod.marca }} 
+              {{prod.medida }} {{ prod.tipo_medida }}</h4></td>
+              <td>R$ {{ prod.valor }}</td>
+              <td class = "quantidade"><h4>
+              <button type="button" onclick="menosUm(this)"><i class="menos fas fa-minus"></i></button>
+              <input type="number"  value="{{prod.quantidade}}" style="font-size: 1.25rem;" name="{{prod.id}}">
+              <button type="button" onclick="maisUm(this)"><i class="mais fas fa-plus" ></i></button></h4></td>
+              <td class = "remove"><h4></h4><button type="submit" class = "remover"onclick="remove(this)"><i class="fas fa-times">
+                <input type="text" name="check{{prod.id}}" value ="{{prod.disponivel}}" style="display: none;">
+              </i></button></td>
+          </tr>
+          {% endfor %}
+        </table>
+        <div class="d-grid gap-2 d-md-block" style="margin-top: 15px; margin-left: 17%;">
+        <button type="submit" class="btn btn-success btn-lg">
+            <h3>Salvar</h3>
+        </button>
+        <button onclick="location.href='indisponiveis/'"type="button" class="btn btn-secondary btn-lg">
+          <h3>Produtos indisponíveis</h3>
+        </button>
+      </div>
+      </form>
+</section>
+  </div>
+</div>
+{% endblock body %}
+{% block js %}
+<script>
+function remove(obj){
+  obj.children[0].children[0].value = 'False'
+}
+function maisUm(s){
+  s.previousElementSibling.value = +s.previousElementSibling.value + +1;
+}
+function menosUm(estado){
+  if(estado.nextElementSibling.value>0){
+    estado.nextElementSibling.value = +estado.nextElementSibling.value - +1
+  }
+}  
+</script>
+{% endblock js %}

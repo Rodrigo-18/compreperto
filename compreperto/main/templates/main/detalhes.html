@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+    {% block title %} Detalhes Produto {% endblock %}
+
+    {% block body %}
+
+    <h1>{{produto.loja.nome}}</h1>
+
+    <h2>Produto: {{produto}}</h2>
+    <h2>Valor: R$ {{produto.valor}}</h2>
+
+    <button>Adicionar ao carrinho</button><br>
+    <a href="javascript:history.back()">Voltar</a>
+
+    {% endblock %}
+
+    

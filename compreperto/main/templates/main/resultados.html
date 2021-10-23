@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+    {% block css %} <link rel="stylesheet" href="{% static 'css/resultados.css' %}"> {% endblock css %}
+    {% block title %} Resultados {% endblock %}
+
+    {% block body %}
+    <div class="px-5 py-3">
+
+            <p class="fs-1">Resultados da Busca</p>
+            <div class="row row-cols-3 row-cols-lg-4">
+                {% if lista %}
+                    {% for produto in lista %}
+                        <div class="col my-3">
+                            <div class="card rounded-3 shadow-sm text-truncate" style="width: 20vw;">
+                                <img src="{% static 'pictures/image-svgrepo-com.svg' %}" class="card-img-top bg-black" alt="imagem-do-produto">
+                                <div class="card-body">
+
+                                    <h5 class="card-title">{{produto.nome}} {{produto.marca}}</h5>
+
+                                    <ul class="card-text ps-0 lh-lg" style = "list-style:none;">
+                                        <li>R$ {{ produto.valor }}</li>
+                                        <li>{{ produto.loja }} - {{ produto.loja.avaliacao}} 
+                                        <span class = "estrela"><i class="nota fas fa-star "></i></span></li>
+                                        {% if produto.loja.status == "Aberto" %}
+                                        <li><span class = "text-success">{{ produto.loja.status }} <i class="fas fa-door-open"></i></span></li>
+                                        <li><a class = "link-success" href="{% url 'detalhesLoja' produto.loja.id %}"> Visitar Loja</a></li>    
+                                        {% else %}
+                                        <li class = "text-warning">{{ produto.loja.status }} <i class="fas fa-door-closed"></i></li>
+                                        <li><a class = "link-warning" href="{% url 'detalhesLoja' produto.loja.id %}"> Visitar Loja</a></li>    
+                                        {% endif %}
+                                    </ul>
+                                    <div class="text-center">
+                                    <a href="{% url 'adicionar' produto.id %}" class="btn btn-primary ">Adicionar ao carrinho</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                <p class="fs-1 text-danger w-100 text-center my-5">Nenhum produto satisfez o critério de busca</p>
+                {% endif %}
+            </div>
+
+    </div>
+    {% endblock %}

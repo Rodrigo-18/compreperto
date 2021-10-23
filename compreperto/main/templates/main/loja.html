@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+    {% block title %} Detalhes Produto {% endblock %}
+
+    {% block body %}
+    <div class="container" style="margin-top: 50px;">
+      <h1>{{loja.nome}}</h1>
+      <p>Proprietário(a): {{loja.lojista.user.first_name}} {{loja.lojista.user.last_name}}</p>
+      <br>
+          <h2>Produtos</h2>
+          {% if produtos %}
+          {% for pr in produtos %}
+          <ul class="list-group">
+            <li class="list-group-item" >
+              <img src="{% static 'pictures/image-svgrepo-com.svg' %}" style="width: 4em">
+              <a href="{% url 'detalhes' pr.id %}" style="text-decoration: none;">{{pr.nome}} {{pr.marca}} ({{pr.medida}} {{pr.tipo_medida}})</a> - R$ {{pr.valor}}
+              <a href="{% url 'adicionar' pr.id %}" style="text-decoration: none;">Adicionar ao carrinho</a>
+            </li>
+          </ul>
+          {% endfor %}
+          {% else %}
+          <p class="alert alert-danger" role="alert">Não há produtos nesta loja</p>
+          {% endif %}
+  
+      </div>
+
+    {% endblock %}

@@ -1,0 +1,103 @@
+{% extends 'main/base.html' %} 
+{% load static %} 
+{% block title %} Carrinho {% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/carrinho_new.css' %}"/>
+{% endblock css %}
+
+{% block body %}
+{% comment %} Conteúdo do corpo {% endcomment %}
+  <div class="px-5 py-5">
+    {% if carrinho %}
+   <a href="javascript:history.back()" id="as" style="text-decoration: none; color: black;"><p class = "fs-4"><i class="fa-solid fa-arrow-left"></i> Continuar Comprando</p></a>
+    {% else %} 
+    <a href="{% url 'pesquisa' %}" style="text-decoration: none; color: black;"><p class = "fs-4"><i class="fa-solid fa-arrow-left"></i> Comece a comprar</p></a> 
+    {% endif %}   
+    <p class = "fs-4 mt-5 border-bottom border-dark"><i class="fa-solid fa-cart-shopping"></i> Carrinho</p>
+    <div class="d-flex">
+      {% comment %} Tabela Carrinho {% endcomment %}
+      {% if carrinho %}
+      <table class="my-5 me-5 table" style = "width:65%">
+        <thead class = "border-bottom">
+          <tr>
+            <th class ="border-0" scope="col">Produto</th>
+            <th class="border-0 text-center" scope="col">Preço</th>
+            <th class="border-0 text-center" scope="col">Quantidade</th>
+            <th class="border-0 text-center" scope="col">Total</th>
+            <th class="border-0 text-center" scope="col">Remover</th>
+
+          </tr>
+        </thead>
+        {% comment %} Produtos {% endcomment %}
+        <tbody>
+        {% for item in carrinho.itemcarrinho_set.all %}
+          
+            <tr class = "border-bottom">
+              <th class="border-0 mt-3 align-middle" scope="row">
+                <div class="card mb-3 border-0" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="{% static 'pictures/image-svgrepo-com.svg' %}" class="rounded card-img-top bg-black" alt="imagem-do-produto">
+                    </div>
+                    <div class="d-flex  col-md-8">
+                        <div class="d-flex justify-content-center flex-column align-middle card-body ">
+                          <h5 class="card-title">{{ item.produto.nome }} {{ item.produto.marca }}</h5>
+                          <p class= "fs-6 fw-light">{{ item.produto.loja }}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </th>
+              <th class="border-0 fw-normal text-center align-middle">R$ {{ item.produto.valor }}</th>
+              <th class="border-0 fw-normal text-center align-middle">
+                <div class="rounded-pill py-1 pill border border-dark w-75 m-auto">
+                  <button class="butn me-3 "><i class="menos fas fa-minus"></button>
+                  {{ item.quantidade }}
+                  <button class="butn ms-3 "><i class="menos fas fa-plus"></button>
+                </div>  
+              </th>
+              <th class="border-0 fw-normal text-center align-middle">R$ {{ item.subtotal }}</th>
+              <th class="border-0 fw-normal text-center align-middle"><button class= "butn"><i class="fas fa-times"></i></button></th>
+            
+            </tr>
+        {% endfor %}
+        </tbody>
+  </table>
+
+  <div class="my-5 ms-5 px-5 border border-secondary rounded pedido-preview">
+    <div class="text-center mt-2">
+      <p class="fs-2">Pedido</p>
+    </div>
+    <hr>
+    <div class="my-5">
+      <p class="fs-5 d-flex">Subtotal<span class = "ms-auto text-right">{{ carrinho.total }}</span></p>
+      <p class="fs-5 d-flex">Entrega<span class = "ms-auto text-right">0.00</span></p>
+    </div>
+    <hr>
+    <div class="my-5">
+      <p class="fs-5 d-flex">Desconto<span class = "ms-auto text-right">0.00</span></p>
+      <p class="fs-6 my-0">Digite seu cupom</p>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control px-0" placeholder="" aria-label="Digite seu cupom" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Aplicar</button>
+      </div>
+    </div>
+
+    <div class="my-5">
+      <p class="fs-2 d-flex">Total <span class="ms-auto">{{ carrinho.total }}</span></p>
+    </div>
+
+    <a class="fs-4 link-warning" href="{% url 'confirmar' %}">Finalizar pedido</a>
+    {% else %}
+    <div class="alert alert-danger" role="alert" style="margin-left: 37%; width: 30%; text-align: center; font-size: 2em;">
+      O carrinho está vazio
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+
+{% block js %}
+{% endblock js %}
+
+{% endblock body %}

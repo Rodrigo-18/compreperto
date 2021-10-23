@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% endblock css %}
+
+{% block js %}
+<script src={% static 'js/traducao-login.js' %} defer></script>
+{% endblock js %}
+{% block body %}
+    
+    
+    <!--Login--> 
+    <div class="container py-5">
+    {% load crispy_forms_tags %}
+    <h1>Login</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="text-center alert alert-{{ message.tags }}">
+                {{ message|safe }}
+             </div>
+        {% endfor %}
+    {% endif %}
+    
+    <form method="POST">
+        {% csrf_token %}
+        {{ login_form|crispy }}
+        <button class="btn btn-primary" type="submit">Login</button>
+    </form>
+    <p class="text-center">Não possui uma conta?<a href="{% url 'registro' %}"> Cadastre-se já</a>.</p>
+    </div>
+{% endblock body %}      

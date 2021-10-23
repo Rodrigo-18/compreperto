@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    /* variáveis */
+
+    --amarelo-forte: #EFAF00;
+    --laranja-forte: #F46F40;
+    --azul-escuro: #343F56;
+    --azul-claro: #C5DCDD;
+    --beje: #FCBE9F;
+    --branco: rgb(250, 250, 250);
+}
+
+/* posicionamento body */
+body{
+    margin: auto;
+}
+
+nav{
+    height: 6rem;
+}
+/* Card */
+.estrela{
+    color: var(--amarelo-forte);
+}

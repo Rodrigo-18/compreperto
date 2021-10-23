@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+/* padrões */
+a{
+    text-decoration: none;
+    color: #404040;
+}
+h1, h2, h3, h4, h5{
+    font-weight: normal;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+/* Organização da página */
+
+
+
+.body-container{
+    margin: 5vh auto; 
+    width: 90%;
+}
+
+.flex-container{
+    max-width: 1728px;
+    display: flex; 
+
+}
+
+
+
+/* Barra de navegação */
+
+nav{
+    display: flex;
+    align-items: center;
+    background-color: #404040;    
+    height: 6vw;
+    width: 100vw;
+
+}
+
+nav h1{   
+    color: #F6B100;
+}
+
+.barra {
+    margin: 0 auto; 
+    width: 90%;
+    max-width: 1728px; 
+
+}
+
+/* Continuar Comprando */
+
+h3.continuar-comprando{
+    font-weight: 400;
+}
+
+/* Sinalizador carrinho */
+#sinalizador-carrinho{
+    font-size: 1.5rem;
+    margin: 2vh 0;
+    padding: 2rem 0;
+    border: .5px solid rgba(151, 151, 151, .8);
+    width: 60%;
+    font-weight: 400;
+    text-indent: 2rem;
+}
+
+/* Produtos */
+
+.produtos{
+    margin-top: 2vh;
+    width: 60%;
+}
+
+/* tabela */
+#carrinho{
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    border-spacing:0 3rem;
+}
+
+tr.produto td   {
+    border-top: .5px solid rgba(151, 151, 151, .8);
+    padding-top: 3rem;
+}
+
+
+
+td > img{
+    width: 25%;
+    border: 1px solid black;
+    margin-right: 1vw;
+      
+}
+
+th{
+    color: rgba(151, 151, 151, .8);
+}
+
+th.principal {
+    width: 40%;
+    margin-top: auto;
+}
+
+td.imagem-produto{
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    
+}
+
+td.quantidade > h4{
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 20%/50%;
+    background:#EFEFEF;
+}
+
+td.remove > .remover{
+    background: #EFEFEF;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+/* estilos específicos dentro da tabela */
+
+.menos{
+    margin-right: 1rem;
+
+}
+
+.mais{
+    margin-left: 1rem;
+}
+
+/* Preview do pedido */
+
+.pedido-preview{
+    
+    margin-left: auto;
+    height: 60vh;
+    width: 30%;
+    border: .5px solid #979797;
+}
+
+.pedido-preview > hr {
+    margin: 3rem;
+}
+
+.info{
+    padding: 3rem;
+}
+
+.titulo{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.valores{
+    display: flex;
+    margin: 2rem 0;
+    line-height: 2rem;
+}
+.valor{
+    text-align: right;
+    margin-left: auto;
+}
+
+.valor > h4, h1{
+    font-weight: 700;
+}
+
+
+.desconto{
+    margin: 2rem 0;
+}
+
+h5{
+    margin-top: 1rem;
+}
+
+/* form desconto */
+
+form{
+    margin-top: 1rem;
+    display: flex ;
+}
+.input-desconto{
+
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1rem;
+    -webkit-appearance: none;
+    border: .5px solid rgba(151, 151, 151, .8);
+    border-right: none;
+}
+
+.aplicar-desconto{
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    background: #404040;
+    -webkit-appearance: none;
+    border: .5px solid #404040;
+    border-left: none;
+}
+
+.total{
+    display: flex;
+}
+
+.fim{ 
+    margin-top: 1rem;   
+    
+}

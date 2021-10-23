@@ -1,0 +1,37 @@
+form {
+  display: inline;
+}
+
+
+button.produto {
+  width: 100px;
+  height: 30px;
+}
+
+button.button-details {
+  background-color: #B8C2CC;
+}
+
+button.button-confirm {
+  background-color: #38C172;
+}
+
+button.button-reject {
+  background-color: #E3342F;
+  color: white;
+}
+
+div#pedido {
+  justify-content: space-between;
+}
+
+div#pedido-detalhes input {
+  height: 30px;
+  padding-left: 10px;
+}
+
+div#pedido-detalhes select {
+  height: 30px;
+  padding: 0 6px 0 10px;
+}
+

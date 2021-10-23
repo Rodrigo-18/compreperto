@@ -1,0 +1,11 @@
+{% extends 'main/base.html' %}
+{% block title %}
+  Detalhes do pedido
+{% endblock title %}
+{% block body %}
+<h1>Detalhes do pedido</h1>
+<p>{{ pedido.data }}</p>
+<p>{{ pedido.get_tipo_entrega_display }}</p>
+<p>{{ pedido.get_tipo_pagamento_display }}</p>
+<p>{{ pedido.get_status_display }}</p>
+{% endblock body %}

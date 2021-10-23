@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+{% load static %}
+    
+    {% block css %} <link rel="stylesheet" href="{% static 'css/pesquisa.css' %}"> {% endblock css %}
+
+    {% block title %} Compreperto {% endblock %}
+    
+    {% block body %}
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="text-center alert alert-{{ message.tags }}">
+                {{ message|safe }}
+             </div>
+        {% endfor %}
+    {% endif %}
+    
+
+<div class="px-5">
+
+    <section class="barra-pesquisa">
+        <h1 class = "frase">Encontre o que você <span>procura!</span></h1>
+        <form method="post" action="{% url 'pesquisa' %}">
+            {% csrf_token %}
+            {{form}}
+            <button id = "pesquisar" type="submit", name="pesquisar">Pesquisar</button>
+        </form>
+    </section>
+    
+    <footer>
+        <h1 class = "frase">Os produtos que você precisa... <br>O mais perto possível!</h1>
+        {% load static %}
+        <img src="{% static 'pictures/pessoas_comprando.svg' %}" alt="">
+    </footer>
+
+</div>  
+    
+    {% endblock %}
+    

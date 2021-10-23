@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    color: #343F56;
+}
+// BARRA DE NAVEGAÇÃO
+nav{
+    font-weight: 700;
+    height: 10vh;
+    .navbar-brand{
+        font-size: 3rem;
+        margin-left: 3vw;
+        color:#EFAF00 ;
+    }
+    ul{
+        
+        li{
+            margin: 2vw;
+            font-size: 1.5rem;
+        }
+        margin-left: 40vw;
+    }
+}
+
+//PARTE DO MEIO SITE
+.middle{
+    margin-left: 3vw;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    align-items: left;
+    text-align: left;
+    button{
+        height: 4rem;
+        width: 8rem;
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        background: #EFAF00;
+        border: 1px solid #EFAF00;
+        color: white;
+        font-weight: 700;
+        
+
+    }
+    
+    input{
+        height: 4rem;
+        width: 30vw;
+        outline: none;
+        text-align: left;
+        font-size: 1.2rem;
+        padding-left: 1rem;
+        border: 1px solid #EFAF00;
+            
+    }
+    
+    h1{
+        font-size: 5rem;
+        margin: 2rem 0;
+        span{
+            color: #EFAF00;
+        }
+    }
+}
+
+footer{
+    width: 90vw;
+    margin: auto;
+    margin-left: 3vw;
+    
+    .content{
+        display: inline-block;
+    }
+    img{  
+        width: 40vw;
+        margin-left: 10vw;
+    }
+
+    h2{
+        color: #F46F40;
+        font-size: 3rem;
+    }
+    
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-size: 1.2rem;
+    opacity: 1; /* Firefox */
+   }
+   
+   :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: 1.2rem;
+   }
+   
+   ::-ms-input-placeholder { /* Microsoft Edge */
+    font-size: 1.2rem;
+ }

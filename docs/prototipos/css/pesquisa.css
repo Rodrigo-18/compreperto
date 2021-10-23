@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #343F56;
+  border-color: #EFAF00;
+}
+
+* i {
+  color: #F46F40;
+}
+
+.grid-container {
+  width: 80vw;
+  height: 80vh;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.5rem;
+      grid-template-areas: "sidebar center center center center center center"
+ "sidebar center center center center center center"
+ "sidebar center center center center center center"
+ "sidebar center center center center center center"
+ "sidebar center center center center center center"
+ "sidebar center center center center center center"
+ "sidebar center center center center center center"
+ "sidebar center center center center center center"
+ "sidebar center center center center center center"
+ "sidebar center center center center center center"
+ "sidebar center center center center center center"
+ "sidebar center center center center center center";
+}
+
+header {
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+header input {
+  display: inline-block;
+  padding-left: 1rem;
+  height: 2.5rem;
+  width: 25vw;
+  margin-left: 30.8vw;
+  outline: none;
+  border: 1px solid #F46F40;
+}
+
+header p {
+  display: inline-block;
+  margin-left: 10.7vw;
+}
+
+header button {
+  background: none;
+  border: none;
+  border: .25px solid #F46F40;
+  margin-left: 1em;
+  height: 2.5rem;
+  padding: 0 1rem;
+  background: #F46F40;
+  color: white;
+}
+
+header span {
+  font-weight: 700;
+  color: #F46F40;
+}
+
+.filter {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 12;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+  border: 1px solid #EFAF00;
+  border-radius: .25rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
+}
+
+.filter p {
+  font-size: .9rem;
+  margin-bottom: .5rem;
+  text-align: left;
+}
+
+.filter select {
+  width: 60%;
+  height: 6vh;
+  padding: 1rem;
+}
+
+.filter .endereco {
+  margin-top: 3rem;
+}
+
+.filter .endereco input {
+  border: 1px solid #EFAF00;
+  width: 60%;
+  height: 6vh;
+  padding: 1rem;
+}
+
+.filter .endereco button {
+  background: #EFAF00;
+  border: none;
+  margin-top: 1rem;
+  height: 6vh;
+  padding: 1rem;
+  color: white;
+  font-weight: 700;
+}
+
+.results {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 12;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
+  grid-area: center;
+}
+
+.card .img-container {
+  margin: 2rem auto;
+  width: 4rem;
+}
+
+.card h2 {
+  color: #F46F40;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card i, .card p {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card .info {
+  margin-left: 1rem;
+}
+
+nav {
+  margin-bottom: 2vh;
+  font-weight: 700;
+  height: 10vh;
+}
+
+nav .navbar-brand {
+  font-size: 3rem;
+  margin-left: 3vw;
+}
+
+nav ul {
+  margin-left: 37.5vw;
+}
+
+nav ul li {
+  margin: 2vw;
+  font-size: 1.5rem;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-size: 1rem;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-size: 1rem;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-size: 1rem;
+  opacity: 1;
+  /* Firefox */
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-size: 1rem;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-size: 1rem;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-size: 1rem;
+}
+/*# sourceMappingURL=pesquisa.css.map */

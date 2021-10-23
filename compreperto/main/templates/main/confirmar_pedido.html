@@ -1,0 +1,94 @@
+{% extends 'main/base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/carrinho.css' %}" />
+<link rel="stylesheet" href="{% static 'css/pedido.css' %}" />{% endblock css %}
+
+{% block title %}Confirmar Dados{% endblock title %}
+{% block body %}
+
+{% comment %} Barra de navegação {%endcomment %}
+
+
+{% comment %} Conteúdo do corpo {% endcomment %}
+
+<div class="body-container">
+
+  <a href="{% url 'carrinho' %}" >
+      <h3 class="continuar-comprando"><i class="fa-solid fa-arrow-left"></i> Voltar ao carrinho</h3>
+  </a>
+  <h1>Confirmar dados </h1>
+  
+  <div class="d-flex">
+  
+    <div class="endereco-container " style="width:65%;border: .5px solid #979797">
+      <section class="produtos">
+        <div id="pedido-detalhes"> 
+        <fieldset style = "width:50vw;">
+          <form method="post" style="position: relative; left: 10px; top: 20px;">
+          {% csrf_token %}
+          <h3><label for="">Endereço</label> </h3><br>
+            <input type="text" name="nome_rua" placeholder="Rua">
+            <input type="number" name="numero_residencia" placeholder="Número">
+            <input type="text" name="complemento" placeholder="Complemento"><br><br>
+            <h3><label for="tipo_pagamento">Tipo de pagamento</label></h3><br>
+            <select name="tipo_pagamento" id="pagamento">
+            
+            <option value="D">Dinheiro</option>
+            <option value="C">Cartão</option>
+            <option value="P">Pix</option>
+            
+            </select><br><br>
+            <h3><label for="tipo_entrega">Tipo de entrega</label></h3><br>
+            <select name="tipo_entrega" id="entrega">
+            <option value="T">Take-Away</option>
+            <option value="D">Delivery</option>
+            </select>
+            <div class="fim">
+              <button type="submit" id="confirmar-button" style="background-color:#aedd94;
+              height: 40px; border-radius: 5px;position: relative;left: 0;top: 50px; "><h3>Confirmar</h3></button>
+            </div>
+        </form>
+      </fieldset>
+        </div>
+        
+      </section>
+    </div>
+    <section class="pedido-preview">
+        <div class="info">
+          <h1 class="titulo">Pedido</h1>
+          <hr>
+          <div class="valores">
+
+            <div class="texto">
+              <h4>Subtotal</h4>
+              <h4>Entrega</h4>
+            </div>
+
+            <div class="valor">
+              <h4>R$ {{ carrinho.total }}</h4>
+              <h4>R$ 0.00</h4>
+            </div>
+
+          </div>
+
+          <hr>
+            
+
+          <div style="position: relative; top: 50px;;" class="total">
+            <div class="texto">
+              <h1>Total</h1>
+            </div>
+            <div class="valor">
+              <h1>R$ {{ carrinho.total }}</h1>
+            </div>
+          </div>
+
+
+          
+
+        </div>
+
+      </section>
+  </div>
+</div>
+<script src="{% static 'js/pedido.js' %}"></script>  
+{% endblock body %}

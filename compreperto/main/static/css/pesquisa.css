@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    /* variáveis */
+
+    --amarelo-forte: #EFAF00;
+    --laranja-forte: #F46F40;
+    --azul-escuro: #343F56;
+    --azul-claro: #C5DCDD;
+    --beje: #FCBE9F;
+}
+/* btn padrao */
+button{
+    cursor: pointer;
+}
+/* posicionamento do body */
+body{
+    overflow: hidden;
+}
+
+/* nav */
+nav{
+    height: 6rem;
+}
+
+/* frases da landing page */
+.frase{
+    color: var(--azul-escuro);
+    font-size: 5rem;
+    font-weight: normal;
+}
+
+.frase > span{
+    color: var(--amarelo-forte);
+}
+
+footer > .frase {
+    font-size: 3rem;
+    color: var(--laranja-forte);
+}
+
+/* barra de pesquisa */
+.barra-pesquisa{
+    margin-top: 5rem;
+}
+input{
+    font-size: 1.2rem;
+    width: 30vw;
+    height: 4rem;
+    padding-left: 1rem;
+    border: 1px var(--amarelo-forte) solid;
+    outline: none;
+    margin-top:3rem ;
+}
+
+#pesquisar{
+    width: 8rem;
+    height: 4rem;
+    margin-left: 1rem;
+    border: 1px var(--amarelo-forte) solid;
+    color: var(--amarelo-forte);
+    background: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+}
+
+#pesquisar:hover{
+    color:white ;
+    background: var(--amarelo-forte);
+    border: none;
+    transition: 2s;
+}
+
+/* footer */
+footer{
+    display: flex;
+    align-items: center;
+}
+
+img{
+    width: 40%;
+    margin-left: auto;
+    animation: move 10s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);    
+  }
+  100% {
+    transform: translate(20px, -50px);
+  }
+}
+
+::-webkit-input-placeholder { /* Edge */
+    font-size: 1.2rem;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: 1.2rem;
+  }
+  
+  ::placeholder {
+    font-size: 1.2rem;
+  }
+

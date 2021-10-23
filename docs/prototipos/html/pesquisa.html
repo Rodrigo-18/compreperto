@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/docs/prototipos/css/pesquisa.css">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/986249b7b6.js" crossorigin="anonymous"></script>
+
+    
+    <title>Lojas</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/docs/prototipos/html/index.html">ComprePerto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/docs/prototipos/html/login.html">Entrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Registre-se</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Sobre nós</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <input type="text" placeholder="Deseja buscar outro produto?">
+        <button>Pesquisar</button>
+
+        <p>Buscando em <span>Localização atual</span></p>
+        
+    </header>
+    
+    <div class="grid-container">
+        
+        <div class="filter">
+            
+            <div class="ordenacao">
+                <p>Você deseja buscar por...</p>
+                <select>
+                    <option value="">Distância</option>
+                    <option value="">Preço</option>
+                    <option value="">Avaliações</option>
+
+                </select>
+            </div>
+
+            <div class="endereco">
+                <p>Deseja buscar em outro endereço?</p>
+                <input type="text"><br>
+                <button>Aplicar</button>
+            </div>
+        </div>
+
+        <div class="results">
+            <div class="card">
+                <div class="img-container">
+                    <img src="/docs/prototipos/pictures/image-svgrepo-com.svg" alt="foto da logo do comercio">
+                    
+                </div>
+
+                <div class="info">
+                    <h2>Mercadinho do Jão</h2>
+                    <i class="fas fa-map-marker-alt"></i><p>1km</p><br>
+
+                    <i class="fas fa-dollar-sign"></i><p>Bons preços</p><br>
+
+                    <i class="fas fa-door-open"></i><p>Aberto</p><br>
+                </div>
+
+
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="/docs/prototipos/pictures/image-svgrepo-com.svg" alt="foto da logo do comercio">
+                    
+                </div>
+
+                <div class="info">
+                    <h2>Mercadinho da Maria</h2>
+                    <i class="fas fa-map-marker-alt"></i><p>2km</p><br>
+
+                    <i class="fas fa-dollar-sign"></i><p>Bons preços</p><br>
+
+                    <i class="fas fa-door-open"></i><p>Aberto</p><br>
+                </div>
+
+
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="/docs/prototipos/pictures/image-svgrepo-com.svg" alt="foto da logo do comercio">
+                    
+                </div>
+
+                <div class="info">
+                    <h2>Mercado do Jorge</h2>
+                    <i class="fas fa-map-marker-alt"></i><p>3km</p><br>
+
+                    <i class="fas fa-dollar-sign"></i><p>Bons preços</p><br>
+
+                    <i class="fas fa-door-open"></i><p>Aberto</p><br>
+                </div>
+
+
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="/docs/prototipos/pictures/image-svgrepo-com.svg" alt="foto da logo do comercio">
+                    
+                </div>
+
+                <div class="info">
+                    <h2>Mercado chiquerrimo</h2>
+                    <i class="fas fa-map-marker-alt"></i><p>4km</p><br>
+
+                    <i class="fas fa-dollar-sign"></i><p>Bons preços</p><br>
+
+                    <i class="fas fa-door-open"></i><p>Fechado</p><br>
+                </div>
+
+
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="/docs/prototipos/pictures/image-svgrepo-com.svg" alt="foto da logo do comercio">
+                    
+                </div>
+
+                <div class="info">
+                    <h2>Zilda Imports</h2>
+                    <i class="fas fa-map-marker-alt"></i><p>5km</p><br>
+
+                    <i class="fas fa-dollar-sign"></i><p>Bons preços</p><br>
+
+                    <i class="fas fa-door-open"></i><p>Fechado</p><br>
+                </div>
+
+
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="/docs/prototipos/pictures/image-svgrepo-com.svg" alt="foto da logo do comercio">
+                    
+                </div>
+
+                <div class="info">
+                    <h2>Chico business</h2>
+                    <i class="fas fa-map-marker-alt"></i><p>6km</p><br>
+
+                    <i class="fas fa-dollar-sign"></i><p>Bons preços</p><br>
+
+                    <i class="fas fa-door-open"></i><p>Aberto</p><br>
+                </div>
+
+
+            </div> 
+
+        </div>
+    </div>
+
+    
+    
+</body>
+</html>
