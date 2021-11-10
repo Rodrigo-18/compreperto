@@ -3,9 +3,8 @@
 ## Equipe do Projeto
 1. Bernardo Vilela
 1. Davi Dantas
-1. Ytalo Jhonata
 1. Rodrigo Soares
-1. Stefaneo Ribeiro
+
 
 ## Visão Geral do Projeto
 O ComprePerto é uma aplicação web que visa ajudar os pequenos comerciantes em face à todos os danos causados pela pandemia. Sendo assim, utilizando-se da ferramente, os lojistas poderão cadastrar sua loja no sistema.
