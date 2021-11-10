@@ -3,7 +3,9 @@
 ## Equipe do Projeto
 1. Bernardo Vilela
 1. Davi Dantas
+1. Ytalo Jhonata
 1. Rodrigo Soares
+1. Stefaneo Ribeiro
 
 
 ## Visão Geral do Projeto
