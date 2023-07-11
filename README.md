@@ -9,7 +9,7 @@
 
 
 ## Visão Geral do Projeto
-O ComprePerto é uma aplicação web que visa ajudar os pequenos comerciantes em face à todos os danos causados pela pandemia. Sendo assim, utilizando-se da ferramente, os lojistas poderão cadastrar sua loja no sistema.
+O ComprePerto é uma aplicação web que visa ajudar os pequenos comerciantes em face à todos os danos causados pela pandemia. Sendo assim, utilizando-se da ferramente, os lojistas poderão cadastrar sua loja no sistema. 
 
 De outra parte os clientes poderão utilizar a sua localização para encontrar o produto desejado em lojas nas suas redondezas. Permitindo, assim, que lojas menores sejam mais notáveis e possam ser vistas por clientes interessados.
 
